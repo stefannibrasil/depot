@@ -11,3 +11,13 @@ two:
   description: MyText
   avatar_file_name: mauss.jpg
   price: 9.99
+
+
+ruby:
+  title: Programming Ruby 1.9
+  description:
+    Ruby is the fastest growing and most exciting dynamic
+    language out there. If you need to get working programs
+    delivered fas, you should add Ruby to your toolbox.
+  avatar_file_name: 'cute.jpeg'
+  price: 49.50

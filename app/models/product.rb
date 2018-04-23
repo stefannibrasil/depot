@@ -1,9 +1,12 @@
 class Product < ApplicationRecord
-  has_attached_file :avatar, styles: {
-                              medium: "300x300>",
-                              thumb: "100x100>"
-                            }
+  validates :avatar, presence: true
+  validates :title, uniqueness: true, presence: true, length: { minimum: 10 }
+  validates :description, presence: true
+  validates :price, presence: true,
+                    numericality: { greater_than_or_equal_to: 0.01 }
 
-  validates_attachment :avatar, presence: true,
-    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+  has_attached_file :avatar, styles: { medium: "300x300>" }
+
+  validates_attachment_content_type :avatar, content_type: /\Aimage/
+  validates_attachment_file_name :avatar, matches: [/.png\Z/i, /.jpe?g\Z/i, /.gif\Z/i]
 end
