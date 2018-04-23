@@ -1,0 +1,8 @@
+<tr>
+  <td class="quantity"><%= line_item.quantity %></td>
+  <td><%= line_item.product.title %></td>
+  <td class="price"><%= number_to_currency(line_item.total_price) %></td>
+  <td colspan="2" class="text-right">
+      <%= button_to 'Delete', line_item, method: :delete, confirm: 'Are you sure?', class: "btn btn-warning btn-sm" %>
+  </td>
+</tr>

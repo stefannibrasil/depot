@@ -1,6 +1,8 @@
 class StoreController < ApplicationController
   include SessionCounter
+  include CurrentCart
   before_action :set_counter
+  before_action :set_cart
 
   def index
     @counter =  session[:counter]
