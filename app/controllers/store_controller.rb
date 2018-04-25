@@ -5,7 +5,7 @@ class StoreController < ApplicationController
   before_action :set_cart
 
   def index
-    @counter =  session[:counter]
+    @counter = session[:counter]
     @products = Product.order(:title)
   end
 end

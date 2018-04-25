@@ -7,13 +7,10 @@
     border-collapse: collapse;
   }
   td {
-    padding: 0.5em;
+    padding: 0.6em;
   }
   td.quantity {
     white-space: nowrap;
-  }
-  td.quantity::after {
-    content: " x";
   }
   td.price {
     font-weight: bold;
