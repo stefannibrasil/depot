@@ -2,7 +2,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<% if @counter > 5 %>
+<% if @counter and @counter > 5 %>
   <aside id="notice">
     <%= "You have accessed our Catalog #{pluralize(@counter, 'time')}" %>
   </aside>

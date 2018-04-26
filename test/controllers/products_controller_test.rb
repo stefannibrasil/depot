@@ -45,7 +45,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     patch product_url(@product), params: {
       product: {
         description: @product.description,
-        avatar:  fixture_file_upload("#{Rails.root}/test/fixtures/files/bob.jpg"),
+        avatar: fixture_file_upload("#{Rails.root}/test/fixtures/files/bob.jpg"),
         price: @product.price,
         title: @title
         }

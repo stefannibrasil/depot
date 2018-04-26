@@ -60,7 +60,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to store_index_url, notice: 'Your Cart is currently empty.' }
-      format.js
+      format.js { redirect_to store_index_url }
       format.json { head :no_content }
     end
   end
