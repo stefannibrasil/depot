@@ -3,15 +3,14 @@
 one:
   title: MyString
   description: MyText
-  avatar_file_name: mauss.jpg
+  avatar_file_name: bob.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  avatar_file_name: mauss.jpg
+  avatar_file_name: bob.jpg
   price: 9.99
-
 
 ruby:
   title: Programming Ruby 1.9
@@ -19,5 +18,5 @@ ruby:
     Ruby is the fastest growing and most exciting dynamic
     language out there. If you need to get working programs
     delivered fas, you should add Ruby to your toolbox.
-  avatar_file_name: 'cute.jpeg'
+  avatar_file_name: bob.jpg
   price: 49.50

@@ -21,7 +21,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       post products_url, params: {
         product: {
           description: @product.description,
-          avatar:  fixture_file_upload("#{Rails.root}/test/fixtures/files/bob.jpg"),
+          avatar: fixture_file_upload("#{Rails.root}/test/fixtures/files/bob.jpg"),
           price: @product.price,
           title: @title
         }
