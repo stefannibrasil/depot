@@ -30,10 +30,26 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.perform_caching = false
+   # To preview email in browser rather than to send a mail to actual user during development
+  #config.action_mailer.delivery_method = :letter_opener
 
+  # If you want to actually test emails, you will have to configure SMTP settings in smtp.yml
+  config.action_mailer.default_url_options = { host:'localhost', port: '3000' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+  # If you want to actually test emails, you will have to configure SMTP settings here
+   config.action_mailer.smtp_settings = {
+    address: ENV['SMTP_ADDRESS'],
+    port: ENV['SMTP_PORT'],
+    authentication: "plain",
+    user_name: ENV['SMTP_USER_NAME'],
+    password: ENV['SMTP_PASSWORD'],
+    domain: ENV['SMTP_DOMAIN'],
+    enable_starttls_auto: true
+  }
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

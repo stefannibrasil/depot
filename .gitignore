@@ -17,12 +17,25 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
 .byebug_history
 /public/packs
 /public/packs-test
+
+# React on Rails
+npm-debug.log*
 /node_modules
-yarn-debug.log*
+/node_modules
 .yarn-integrity
+/yarn-error.log
+
+# Generated js bundles
+/public/webpack/*
+/public/webpack-test/*
+
+# Uploads
+/public/uploads
+
+# Ignore application configuration
+/config/env/test.env
+/config/env/development.env
+
