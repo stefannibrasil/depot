@@ -1,4 +1,3 @@
-
 require 'pago'
 
 class Order < ApplicationRecord
