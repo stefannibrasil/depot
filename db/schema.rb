@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425233903) do
+ActiveRecord::Schema.define(version: 20180516224539) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20180425233903) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.decimal "price", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,7 +3,7 @@
 one:
   title: MyString
   description: MyText
-  avatar_file_name: bob.jpg
+  avatar_file_name: Product.create(:asset => fixture_file_upload("#{Rails.root}/test/fixtures/files/bob.jpg", "image/png"))
   price: 9.99
 
 two:
