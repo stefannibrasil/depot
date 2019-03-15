@@ -34,7 +34,8 @@ gem 'activemodel-serializers-xml'
 gem 'high_voltage', '~> 3.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootsnap', require: false
+gem 'bootsnap', '>= 1.1.0', require: false
+gem 'mini_magick', '~> 4.8'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.6'

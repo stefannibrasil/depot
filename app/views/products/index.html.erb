@@ -15,7 +15,9 @@
     <% @products.each do |product| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td class="image">
-          <%= image_tag(product.avatar.url(:medium), class: 'list_image') %>
+          <% if product.image.attached? %>
+            <%= image_tag product.image.variant(resize: "120x120"), class: 'list_image' %>
+          <% end %>
         </td>
         <td class="description">
           <h1><%= product.title %></h1>
