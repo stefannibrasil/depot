@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   include CurrentCart
   include SessionCounter
-  skip_before_action :authorize, only: :create
+  # skip_before_action :authorize, only: :create
   before_action :set_counter
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]

@@ -11,15 +11,7 @@ class ActiveSupport::TestCase
     File.new("#{Rails.root}/test/fixtures/files/bob.jpg")
   end
 
-  def login_as(user)
-    post login_url, params: { username: user.username, password: 'secret' }
-  end
-
   def logout
     delete logout_url
-  end
-
-  def setup
-    login_as users(:one)
   end
 end

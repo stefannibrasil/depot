@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg fixed-top nav-down" color-on-scroll="500">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" href="/" rel="tooltip" title="Pragprog Books Online Store" data-placement="bottom">
+        Pragprog Books Online Store
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "About", page_path("about"), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to @cart, class: "btn btn-round btn-danger" do %>
+            <i class="nc-icon nc-cart-simple"> Cart</i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
